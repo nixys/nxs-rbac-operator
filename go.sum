@@ -159,10 +159,10 @@ github.com/modern-go/reflect2 v1.0.2 h1:xBagoLtFs94CBntxluKeaWgTMpvLxC4ur3nMaC9G
 github.com/modern-go/reflect2 v1.0.2/go.mod h1:yWuevngMOJpCy52FWWMvUC8ws7m/LJsjYzDa0/r8luk=
 github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822 h1:C3w9PqII01/Oq1c1nUAm88MOHcQC9l5mIlSMApZMrHA=
 github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822/go.mod h1:+n7T8mK8HuQTcFwEeznm/DIxMOiR9yIdICNftLE1DvQ=
-github.com/nixys/nxs-go-appctx/v2 v2.0.0 h1:t5zLCcT9y8SqTm5OhnTQlRMQmOWNE+KNbAU36efrX44=
-github.com/nixys/nxs-go-appctx/v2 v2.0.0/go.mod h1:kw7Z83tJKiGrZ3cWp0wShe+e1wod6QEeJAaYxx/1Fq0=
-github.com/nixys/nxs-go-conf v1.0.1 h1:yR2KwNx1CRy8yH7xgr1P6aGNAN6G/5WR06uZIS1EyBc=
-github.com/nixys/nxs-go-conf v1.0.1/go.mod h1:m2zxhmA7YfWdFdmTQZSqP0+C16oRUztfXss+yhbScgY=
+github.com/nixys/nxs-go-appctx/v2 v2.3.0 h1:YecOhYTZNnXy6Cvn3xkKSoYXweCsRpD/QR6Key4F7Ik=
+github.com/nixys/nxs-go-appctx/v2 v2.3.0/go.mod h1:kw7Z83tJKiGrZ3cWp0wShe+e1wod6QEeJAaYxx/1Fq0=
+github.com/nixys/nxs-go-conf v1.1.0 h1:FGm9D/1gpFcfRIdvfrsup9if5PvyQxc/VhE/85+n5BQ=
+github.com/nixys/nxs-go-conf v1.1.0/go.mod h1:m2zxhmA7YfWdFdmTQZSqP0+C16oRUztfXss+yhbScgY=
 github.com/onsi/ginkgo/v2 v2.9.1 h1:zie5Ly042PD3bsCvsSOPvRnFwyo3rKe64TJlD6nu0mk=
 github.com/onsi/gomega v1.27.4 h1:Z2AnStgsdSayCMDiCU42qIz+HLqEPcgiOCXjAU/w+8E=
 github.com/pborman/getopt/v2 v2.1.0 h1:eNfR+r+dWLdWmV8g5OlpyrTYHkhVNxHBdN2cCrJmOEA=

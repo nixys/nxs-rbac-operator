@@ -4,8 +4,8 @@ go 1.19
 
 require (
 	github.com/go-sql-driver/mysql v1.6.0
-	github.com/nixys/nxs-go-appctx/v2 v2.0.0
-	github.com/nixys/nxs-go-conf v1.0.1
+	github.com/nixys/nxs-go-appctx/v2 v2.3.0
+	github.com/nixys/nxs-go-conf v1.1.0
 	github.com/pborman/getopt/v2 v2.1.0
 	github.com/sirupsen/logrus v1.8.1
 	k8s.io/api v0.27.1

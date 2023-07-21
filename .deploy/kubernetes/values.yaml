@@ -1,0 +1,75 @@
+
+releasePrefix: "-"
+generic:
+  labels:
+    app: nxs-rbac-operator
+deployments:
+  '':
+    serviceAccountName: role-creator
+    extraSelectorLabels:
+      app: nxs-rbac-operator
+    affinity:        
+      nodeAffinity: {}
+      podAntiAffinity: {}
+      podAffinity: {} 
+    podAnnotations:
+      checksum/nxs-rbac-operator-config: '{{ include "helpers.workload.checksum" (index $.Values.secrets "nxs-rbac-operator-config") }}'
+    strategy:
+      type: Recreate
+    containers:
+    - name: nxs-rbac-operator
+      image: registry.nixys.ru/public/nxs-rbac-operator
+      imageTag: latest
+      volumeMounts:
+      - mountPath: /nxs-rbac-operator.conf
+        name: config
+        subPath: nxs-rbac-operator.conf
+    volumes:
+    - name: config
+      type: secret
+      originalName: nxs-rbac-operator-config  
+      items:
+      - key: app.conf
+        path: nxs-rbac-operator.conf
+secrets:
+  nxs-rbac-operator-config:
+    data:         
+      app.conf: |
+        rules:
+        - ns: someRegex
+          roleBindings:
+          - role:
+              kind: ClusterRole or Role
+              name: someName
+            subjects:
+              serviceAccounts:
+              - someServiceAccount
+              users:
+              - someUser
+              groups:
+              - someGroup
+serviceAccount:
+  role-creator:
+    clusterRole:
+      name: role-creator
+      rules: 
+      - apiGroups:
+        - rbac.authorization.k8s.io
+        resources:
+        - clusterrolebindings
+        - rolebindings
+        verbs:
+        - list
+        - watch
+        - create
+        - update
+        - get
+        - delete
+      - apiGroups:
+        - ''
+        resources:
+        - namespaces
+        verbs:
+        - list
+        - watch
+        - get
